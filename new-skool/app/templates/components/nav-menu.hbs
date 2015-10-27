@@ -1,0 +1,12 @@
+{{yield}}
+<ul>
+  {{#each items as |item|}}
+    <li {{action 'checkRoute'}}>
+      {{#if item.isActive}}
+        {{item.label}}
+      {{else}}
+        {{#link-to item.route}}{{item.label}}{{/link-to}}
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
